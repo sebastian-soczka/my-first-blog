@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+
+
+{% block page_subtitle %}
+    <p>Seria: {{ post.book.series }}</p>
+    <p>Księga: {{ post.book }}</p>
+    <p>Rozdział: {{ post.chapter_nr }} - {{ post.title }}</p>
+    <p>Opublikowano: {{ post.published_date }}</p>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="post">
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    <hr>
+
+{% endblock %}

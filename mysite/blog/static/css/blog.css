@@ -1,0 +1,18 @@
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #ffffff;
+}
+
+body, a:link, a:visited,  a:hover,  a:active{
+    color: #212529;
+}
+header{
+    font-family: 'Alegreya', serif;
+
+}
+
+
+article {
+    font-family: 'Martel', serif;
+
+}

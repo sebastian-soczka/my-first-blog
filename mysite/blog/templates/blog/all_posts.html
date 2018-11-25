@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+
+
+{% block page_subtitle %}
+    <h1>Wszystkie wpisy</h1>
+{% endblock %}
+
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+
+            <h3><a href="/post/{{ post.id }}">{{ post.title }}</a></h3>
+            <h5>Opublikowano: {{ post.published_date }}</h5>
+
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

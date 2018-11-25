@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title> Do dysku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Martel" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+</head>
+<body>
+<section class="container">
+    <header>
+        <a href="/">
+            <h1>Do dysku</h1>
+            <h2>Blog poświęcony twórczości literackiej</h2>
+        </a>
+    </header>
+
+    <!-- Menu -->
+
+    {% include "./menu.html" %}
+
+    <!-- Content -->
+
+    <article class="col-12">
+
+        {% block page_subtitle %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+    </article>
+    <footer class="col-12">
+        <p>Ta strona w całości została stworzona przez Sebastian Soczka.</p>
+        <p>Cała zawartość strony to moja autorska twórczość nie zezwalam na jej rozpowszechnianie w innej formie niż
+            podanie bezpośredniego linka do bloga.
+            Nie zezwalam również na kopiowanie i przechowywanie części lub całości zawartej tu twórczości bez
+            uprzedniej
+            zgody z mojej strony.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/themeChanger.js' %}"></script>
+</section>
+</body>
+
+</html>
